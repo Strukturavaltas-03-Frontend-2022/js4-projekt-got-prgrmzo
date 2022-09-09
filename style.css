@@ -1,0 +1,152 @@
+@font-face {
+  font-family: GoT;
+  src: url("./fonts/Game\ of\ Thrones.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: "GoT", sans-serif;
+}
+
+.img--container {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/site/mapblue.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  display: grid;
+  grid-template: repeat(6, auto) / repeat(8, auto);
+  padding: 5px;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: darkgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.got-header {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin-top: 10px;
+}
+
+.charDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.charDiv img {
+  width: 50%;
+}
+
+.charName {
+  padding: 5px;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+.sidebar-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.sidebar-search--field {
+  display: flex;
+  padding: 0 10px;
+}
+
+.inputfield {
+  outline: none;
+  border: none;
+  padding: 5px;
+  background: white;
+}
+
+.search-btn {
+  padding: 5px;
+  border: none;
+  background: white;
+}
+.search-btn:hover {
+  background: black;
+  color: darkgrey;
+}
+
+.sidebar-search--error {
+  margin-bottom: 10px;
+  font-size: 0.5em;
+}
+
+.sidebar-img--container {
+  width: 100%;
+}
+
+.side-bar--top {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  gap: 10px;
+}
+
+.sidebar-description {
+  font-size: 0.6em;
+  text-align: justify;
+}
+
+.sidebar-house {
+  width: 10%;
+}
+
+.title-house {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.charDiv:hover {
+  box-shadow: 0 0 5px 5px black;
+  animation: scale 1s ease-in-out infinite;
+  background: darkgrey;
+  border-radius: 5px;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 5px;
+}
